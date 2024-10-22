@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+html {
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2F2F2F;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'Empires';
+    src: url('fonts/Empires.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    color: #a69eae;
+    border: solid rgb(109, 109, 109) 2px;
+    border-radius: 5px;
+    padding: 2.5px 5px;
+    display: inline-block;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+header {
+    color: #C4A7E7;
+    text-align: start;
+    display: flex;
+    justify-content: left;
+}
+@media only screen and (max-width: 950px){
+    header{
+        font-size: 0.1rem;
+        justify-content: center;
+        display: block;
+        text-align: center;
+        display: block;
+    }    
+}
+.pfp {
+    margin: 30px;
+    width: 180px;
+    height: 200px;
+    border-radius: 10%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pfp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 950px){
+    .pfp{
+        justify-content: center;
+        display: block;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }    
+}
+.intro {
+    color: #d3d2d4;
+    font-size: 4rem;
+    font-family: 'Empires';
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+.intro p {
+    margin-top: 60px;
+    margin-bottom: 5px;
+}
+
+p.intro-2 {
+    margin-top: 0px;
+    color: #d3d2d4;
+    font-size: 2rem;
+    font-family: 'Satisfy', cursive;
+}
+@media only screen and (max-width: 950px){
+    .intro p{
+        font-size: 4rem;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: 10px;
+    }
+    .intro-2{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0px;
+    }
+    p.intro-2{
+        font-size: 1.5rem;
+        margin-bottom: 0px;
+    }
+}
+
+/** Socials **/
+.socials{
+    display: inline;
+    text-align: start;
+    position: relative;
+    margin: 30px;
+    font-size: 25px;
+  }
+.social-logos{
+    padding-left: 20px;
+}
+.social-logos a{
+    padding: 10px;
+  }
+.social-logos :hover{
+    border: 2px solid rgb(244, 244, 244);
+    position: static;
+    color: rgb(207, 207, 207);
+}
+
+@media only screen and (max-width: 950px){
+    .socials{
+        text-align: center;
+    }
+    .social-logos{
+        padding-left: 0px;
+    }
+}
+/** Container **/
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.container-about-skills {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+/**Skills Section**/
+.skills{
+    margin-bottom: 20px;
+    width: 50%;
+
+}
+#skills-intro{
+    color: #dddcdf;
+    font-size: 1.8rem;
+    font-family: sans-serif, cursive;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    font-family: 'Satisfy', cursive;
+}
+.skills-list{
+    padding-left: 20px;
+}
+.skills-list p{
+    color: #d3d2d4;
+    font-size: 1.3rem;
+    font-family: 'Satisfy', cursive;
+    padding: 0px;
+    margin: 5px;
+}
+@media only screen and (max-width: 950px){
+    .skills{
+        margin-right: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .skills-list p{
+        font-size: 1.2rem;
+    }
+    .skills-list button{
+        margin-right: 0px;
+        margin-left: 2px;
+        margin-bottom: 3px;
+    }
+}
+.skills-list p::before {
+    content: "• "; 
+    color: #cbcbcb;
+    font-size: 1.2em; 
+    margin-right: 5px;
+}
+
+
+.skills-list button{
+    background-color: #444444;
+    color: #b9b8b8;
+    padding: 3px;
+    margin-left: 2px;
+    margin-bottom: 3px;
+    padding-bottom: 2px;
+    border: solid 1px rgb(129, 128, 128);
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: help;
+}
+.skills-list button:hover {
+    background-color: #444444;
+    color: #b9b8b8;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.about{
+    width: 50%;
+    color: #dddcdf;
+    font-size: 1.8rem;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+}
+#about-intro{
+    color: #d3d2d4;
+    font-size: 1.8rem;
+    font-family: 'Satisfy', cursive;
+    padding: 0px;
+    margin: 0px;
+}
+.about span{
+    color: #afaeb0;
+    font-size: 1.3rem;
+    font-family: monospace;
+    padding: 0px;
+    margin: 0px;
+}
+
+@media only screen and (max-width: 950px){
+
+    .container-about-skills {
+        display: block;
+        justify-content: center;
+    }
+    .about{
+        margin-right: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .about span{
+        font-size: 1.2rem;
+    }
+    .skills-list button{
+        margin-right: 0px;
+        margin-left: 2px;
+        margin-bottom: 3px;
+    }
+    #about-span{
+        display: none;
+        display: hidden;
+    }
+    
+        .container {
+            display: absolute;
+            padding: 0px;
+        }
+    
+        .container-about-skills, .about {
+            width: 100%;
+        }
+
+        #about-p{
+            font-family: monospace;
+            font-size: 1.1rem;
+            margin-right: 20px;
+        }
+    }
+
+@media only screen and (min-width: 705px){
+    #about-p{
+        display: none;
+    }
+   }
+
+/**Projects Section**/
