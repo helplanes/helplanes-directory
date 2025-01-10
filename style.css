@@ -290,7 +290,7 @@ p.intro-2 {
 }
 
 /** Footer **/
-footer h1 {
+.footer h1 {
   font-family: "Delius", serif;
   font-size: 14vw; /* Dynamic font size based on viewport width */
   font-weight: bold;
