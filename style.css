@@ -290,15 +290,21 @@ p.intro-2 {
 }
 
 /** Footer **/
+.footer {
+  background-color: #1a1a1a; /* Dark background for the footer */
+  padding: 20px 0; /* Add padding for spacing */
+  position: relative;
+  text-align: center; /* Center-align the content */
+}
+
 .footer h1 {
-  font-family: "Delius", serif;
+  font-family: "Delius", serif; /* Custom font */
   font-size: 14vw; /* Dynamic font size based on viewport width */
   font-weight: bold;
   text-transform: uppercase; /* Make text uppercase */
   color: #ffffff; /* White color for the text */
-  width: 100%;
-  margin: 0;
-  text-align: center;
+  margin: 0; /* Remove default margin */
+  width: 100%; /* Ensure the text spans the entire width */
 }
 
 /**Projects Section**/
