@@ -1,12 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Delius&family=Fira+Mono:wght@400;500;700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
-
 html {
   overflow-x: hidden;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Satisfy", cursive, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #2f2f2f;
@@ -92,7 +88,7 @@ p.intro-2 {
   margin-top: 0px;
   color: #d3d2d4;
   font-size: 2rem;
-  font-family: "Satisfy", cursive;
+  font-family: "Playwrite GB S", sans-serif, Arial;
 }
 @media only screen and (max-width: 950px) {
   .intro p {
@@ -237,7 +233,7 @@ p.intro-2 {
 .about span {
   color: #afaeb0;
   font-size: 1.3rem;
-  font-family: monospace;
+  font-family: "Delius", sans-serif, Arial;
   padding: 0px;
   margin: 0px;
 }
@@ -264,6 +260,7 @@ p.intro-2 {
   #about-span {
     display: none;
     display: hidden;
+    font-family: "Delius", sans-serif, Arial;
   }
 
   .container {
