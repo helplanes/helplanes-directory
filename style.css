@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Delius&family=Fira+Mono:wght@400;500;700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
 
 html {
   overflow-x: hidden;
@@ -286,6 +287,18 @@ p.intro-2 {
   #about-p {
     display: none;
   }
+}
+
+/** Footer **/
+footer h1 {
+  font-family: "Delius", serif;
+  font-size: 14vw; /* Dynamic font size based on viewport width */
+  font-weight: bold;
+  text-transform: uppercase; /* Make text uppercase */
+  color: #ffffff; /* White color for the text */
+  width: 100%;
+  margin: 0;
+  text-align: center;
 }
 
 /**Projects Section**/
