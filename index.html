@@ -23,7 +23,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Delius&family=Fira+Mono:wght@400;500;700&family=Playwrite+GB+S:ital,wght@0,100..400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script src="script.js"></script>
+    <script>
+        var subdomain = window.location.hostname.split(".")[0]; 
+        if (subdomain === "events") window.location.replace("/events/");
+        if (subdomain === "blog") window.location.replace("/blog/");
+        if (subdomain === "sponsor") window.location.replace("/sponsor/");
+        if (subdomain === "projects") window.location.replace("/projects/");
+        if (subdomain === "talks") window.location.replace("/talks/");
+        if (subdomain === "gallery") window.location.replace("/gallery/");
+      </script>
+      
     <header>
         <div class="pfp">
             <img src="images/pfpMain.JPG" alt="Profile Picture">
