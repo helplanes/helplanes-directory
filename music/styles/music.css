@@ -1,55 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Delius&family=Fira+Mono:wght@400;500;700&family=Grechen+Fuemen&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-weight: 500;
+}
+
+.video-container {
+  filter: brightness(0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1; /* Video stays in the background */
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh; /* Maintain 16:9 aspect ratio */
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  pointer-events: none; /* Disable interaction */
 }
 
 .music {
+  filter: brightness(1);
   width: 100vw;
   height: 100vh;
-  background-color: rgb(0, 0, 0);
-  color: rgb(9, 9, 9);
+  position: relative;
 }
-#video {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  overflow: hidden;
+
+.live-count {
+  font-size: 1.3rem;
+  color: rgb(176, 176, 176);
+  font-family: "Montserrat Alternates", serif;
+  font-weight: 200;
+  font-style: normal;
+
+  font-weight: 100;
+  font-style: normal;
 }
 
 header {
   display: flex;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  background-color: rgb(8, 7, 7);
+  width: 100%;
+  background-color: rgba(8, 7, 7, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensures navbar stays above the video */
 }
+
 header img {
   width: 2rem;
   height: 1.5rem;
 }
+
 .nav-links {
-  cursor: pointer;
   display: flex;
   list-style-type: none;
   gap: 1.5rem;
   align-items: center;
 }
+
 .nav-links li h2 {
   display: inline-block;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   border: none;
-  align-items: center;
   font-weight: 350;
   font-size: 1.2rem;
 }
+
 i {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  align-items: center;
 }
+
+.nav-links a {
+  border: none;
+  color: #cfcfcf;
+  text-decoration: none;
+}
+
 .nav-links :hover {
   color: rgb(232, 230, 230);
 }
@@ -58,5 +104,133 @@ i {
   border: 2px solid #858585;
   border-radius: 8px;
   padding: 10px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1a1a1a00;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+.controls {
+  display: flex;
+  color: white;
+  justify-content: center;
   align-items: center;
+  gap: 3rem;
+  margin-bottom: 1.5rem;
+}
+.controls i {
+  color: #a5a5b0;
+}
+
+/*------ play/pause ------*/
+.container {
+  --color: #a5a5b0;
+  --size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--size);
+  user-select: none;
+  fill: var(--color);
+}
+
+.container .play {
+  position: absolute;
+  animation: keyframes-fill 0.5s;
+}
+
+.container .pause {
+  position: absolute;
+  display: none;
+  animation: keyframes-fill 0.5s;
+}
+
+/* ------ On check event ------ */
+.container input:checked ~ .play {
+  display: none;
+}
+
+.container input:checked ~ .pause {
+  display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+  0% {
+    transform: rotate(-180deg) scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: rotate(-10deg) scale(1.2);
+  }
+}
+/*------ mute/unmute ------*/
+.container {
+  --color: #a5a5b0;
+  --size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--size);
+  user-select: none;
+  fill: var(--color);
+}
+
+.container .mute {
+  position: absolute;
+  animation: keyframes-fill 0.5s;
+}
+
+.container .voice {
+  position: absolute;
+  display: none;
+  animation: keyframes-fill 0.5s;
+}
+
+/* ------ On check event ------ */
+.container input:checked ~ .mute {
+  display: none;
+}
+
+.container input:checked ~ .voice {
+  display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+  0% {
+    transform: rotate(0deg) scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: rotate(-10deg) scale(1.2);
+  }
 }
