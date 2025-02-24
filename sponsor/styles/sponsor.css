@@ -57,3 +57,86 @@ i {
 .nav-links :hover {
   color: rgb(232, 230, 230);
 }
+/* ----------- navbar botton ----------- */
+.navbar-bottom {
+  font-family: "Delius", serif;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1a1a1a;
+  color: white;
+  padding: 2rem 2rem;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #858585;
+
+  /* Responsive width */
+  width: min(90vw, 600px);
+  min-width: 200px;
+  max-width: 90vw;
+  justify-content: center;
+}
+
+/* Navbar Links */
+.navbar-bottom {
+  font-family: "Delius", serif;
+  position: fixed;
+  bottom: 20px;
+  /* Original border, color, etc. */
+  border: 2px solid #858585;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1a1a1a;
+  color: white;
+  padding: 0px 20px; /* same as original */
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+  /* --- Added for responsiveness --- */
+  box-sizing: border-box; /* ensures padding + border count in total width */
+  max-width: 95vw; /* keep navbar within the screen */
+  width: auto; /* let width adapt to content */
+}
+
+.navbar-bottom a {
+  text-decoration: none;
+  color: #cfcfcf;
+  /* Use clamp() so font size grows/shrinks */
+  font-size: clamp(14px, 2vw, 20px);
+  /* Use clamp() for padding so it scales */
+  padding: clamp(3px, 1vw, 6px) clamp(15px, 2vw, 25px);
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.navbar-bottom a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon {
+  font-weight: bold;
+}
+
+/* Optional: wrap items on very narrow screens */
+@media (max-width: 500px) {
+  .navbar-bottom {
+    justify-content: center;
+  }
+}
+@media (max-width: 1224px) {
+  .nav-container {
+    display: none;
+  }
+}
+@media (min-width: 1224px) {
+  .navbar-bottom {
+    display: none;
+  }
+}
